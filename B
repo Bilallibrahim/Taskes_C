@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0;//Total Openiones
+    int projects; 
+    cin >> projects;
+    int A; //Alice
+    int B;//Bob
+    int C;//Charlie
+    for (int i = 0; i < projects; i++) {
+        cin >> A >> B >> C; 
+
+        if (A + B + C >= 2) {
+            sum++;
+        }
+    }
+
+    cout << endl << sum << endl;
+
+}
