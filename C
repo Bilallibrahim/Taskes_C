@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin >> n;
+    string titles[10000];
+    string title;
+    int co[10000];
+    int pos = 0;
+    while (n--) {
+        cin >> title;
+        int i = 0;
+        for (; i < pos; i++) {
+            if (titles[i] == title) {
+                break;
+            }
+        }
+        if (i == pos) {
+            titles[pos] = title;
+            co[pos] = 0;
+            pos++;
+            cout << "OK\n";
+        }
+        else {
+            co[i]++;
+            cout << title << co[i] << "\n";
+        }
+    }
+
+}
